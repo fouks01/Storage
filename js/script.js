@@ -42,9 +42,6 @@ const render = function () {
             toDoData.splice(index, 1);
             localStorage.setItem('toDoData', JSON.stringify(toDoData));
 
-            console.log(toDoData[item]);
-            console.log(toDoData.indexOf(item));
-
 
         });
     });
