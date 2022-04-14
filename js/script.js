@@ -38,9 +38,13 @@ const render = function () {
 
         li.querySelector('.todo-remove').addEventListener('click', function () {
             li.remove(li);
-            toDoData.splice(item, 1);
+            let index = toDoData.indexOf(item);
+            toDoData.splice(index, 1);
             localStorage.setItem('toDoData', JSON.stringify(toDoData));
-            console.log(toDoData);
+
+            console.log(toDoData[item]);
+            console.log(toDoData.indexOf(item));
+
 
         });
     });
